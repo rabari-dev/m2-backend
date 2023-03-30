@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <!-- Add new Tab -->
+        <tab id="rabari" translate="label" sortOrder="400">
+            <label>Rabari</label>
+        </tab>
+        <section id="rabari_backend_config" translate="label" type="text" sortOrder="0" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Rabari Documentation</label>
+            <tab>rabari</tab>
+            <group id="recommended_solutions" translate="label" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Recommended Solutions:</label>
+                <frontend_model>Rabari\Backend\Block\Adminhtml\System\Config\Extensions</frontend_model>
+            </group>
+        </section>
+        <section id="csp" translate="label" type="text" sortOrder="0" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>CSP Settings</label>
+            <tab>rabari</tab>
+            <group id="mode" translate="label" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>CSP Mode Configuration:</label>
+                <group id="storefront" translate="label" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>StoreFront Configuration:</label>
+                    <field id="report_uri" translate="label" sortOrder="1" type="text" showInDefault="1" showInWebsite="0" showInStore="0">
+                        <label>Report URI</label>
+                        <validate>required-entry</validate>
+                    </field>
+                </group>
+                <group id="admin" translate="label" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Admin Configuration:</label>
+                    <field id="report_uri" translate="label" sortOrder="1" type="text" showInDefault="1" showInWebsite="0" showInStore="0">
+                        <label>Report URI</label>
+                        <validate>required-entry</validate>
+                    </field>
+                </group>
+            </group>
+        </section>
+    </system>
+</config>

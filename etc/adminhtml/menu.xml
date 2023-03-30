@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Rabari_Backend::RabariBase" title="Rabari" module="Rabari_Backend" sortOrder="20" resource="Rabari_Backend::RabariBase"/>
+
+        <add
+                id="Rabari_Backend::Rabari_HelpCenter"
+                title="Contact Rabari"
+                module="Rabari_Backend"
+                action="adminhtml/system_config/edit/section/rabari_backend_config/"
+                sortOrder="1"
+                parent="Rabari_Backend::RabariBase"
+                resource="Rabari_Backend::Rabari_HelpCenter"
+        />
+    </menu>
+</config>
